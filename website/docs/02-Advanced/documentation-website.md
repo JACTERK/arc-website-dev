@@ -24,12 +24,12 @@ Navigate to `docusaurus.config.js` located in the `website` directory in the mai
 The main values that must be changed are highlighted at the top of the configuration page, the main ones being the
 `url`, `baseUrl`, `organizationName`, and `projectName`. Below is a table with more information on each value
 
-|                    | Example                        | Definition                                                                       |
-|--------------------|--------------------------------|----------------------------------------------------------------------------------|
-| `url`              | `https://d3b-center.github.io` | The url of your site (Usually `https://YOUR-GITHUB-USERNAME.github.io`)          |
-| `baseUrl`          | `/Arc/`                        | The /<baseUrl>/ pathname under which your site is served (Usually the repo name) |
-| `organizationName` | `D3b`                          | Organization Name (If hosting personally, your GitHub username)                  |
-| `projectName`      | `Arc`                          | Project Name (Usually the repo name)                                             |
+|                    | Example                        | Definition                                                                   |
+|--------------------|--------------------------------|------------------------------------------------------------------------------|
+| `url`              | `https://d3b-center.github.io` | The url of your site (Usually `https://YOUR-GITHUB-USERNAME.github.io`)      |
+| `baseUrl`          | `/Arc/`                        | The baseUrl pathname under which your site is served (Usually the repo name) |
+| `organizationName` | `D3b`                          | Organization Name (If hosting personally, your GitHub username)              |
+| `projectName`      | `Arc`                          | Project Name (Usually the repo name)                                         |
 *This example is based on the website hosted at `https://d3b-center.github.io/Arc/`*
 
 
