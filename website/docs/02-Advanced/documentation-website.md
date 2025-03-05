@@ -1,25 +1,25 @@
 # Arc Documentation Website
 
 This document gives you information on how to get the Arc Documentation site running on your own repo for testing and
-development purposes. 
+development purposes.
 
-This site is built using [Docusaurus](https://docusaurus.io/). To learn more, read their documentation 
+This site is built using [Docusaurus](https://docusaurus.io/). To learn more, read their documentation
 [here](https://docusaurus.io/docs).
 
 # Initial Configuration
 In the main repo, the site is configured to run on CHOP's GitHub Organization. Due to this, a few configuration options
-need to be changed prior to the site working as expected. 
+need to be changed prior to the site working as expected.
 
 ## Repo Configuration
 Before moving any further, we need to enable GitHub Pages via Actions on your repo.
 
-Navigate to `https://github.com/YOUR-USERNAME/YOUR-REPO/settings/pages` and under the `Source` dropdown, select 
+Navigate to `https://github.com/YOUR-USERNAME/YOUR-REPO/settings/pages` and under the `Source` dropdown, select
 `GitHub Actions`. This will allow the workflow located under `.github/workflows/static.yml` to build, upload, and host
-the page. 
+the page.
 
 
 ## App Configuration
-Navigate to `docusaurus.config.js` located in the `website` directory in the main repo. 
+Navigate to `docusaurus.config.js` located in the `website` directory in the main repo.
 
 The main values that must be changed are highlighted at the top of the configuration page, the main ones being the
 `url`, `baseUrl`, `organizationName`, and `projectName`. Below is a table with more information on each value
@@ -39,28 +39,28 @@ The main values that must be changed are highlighted at the top of the configura
 
 Adding new documentation in the existing folder structure is simple. All you need to do is just add a markdown file
 into one of the folders, and upon the site reloading it will display similarly to the rest of the documentation on the
-site. 
+site.
 
-By default, documentation is displayed **alphabetically**, however if you want to override this order, simply add 
+By default, documentation is displayed **alphabetically**, however if you want to override this order, simply add
 the prefix `001`, `002`, `003`, etc. to the file. Files labeled this way will display in numerical order with the
-prefix stripped before displaying to the user. 
+prefix stripped before displaying to the user.
 
-If you would like to add a new folder (as well as a corresponding item in the sidebar), that is a bit more involved, but 
-still fairly simple. 
+If you would like to add a new folder (as well as a corresponding item in the sidebar), that is a bit more involved, but
+still fairly simple.
 
 ## Adding a New Folder
 
-First, look at your current documentation structure. By default, there are a number of documentation folders with the 
-title format of `##-FOLDER TITLE`, with the `##` being the order in which the folders should be displayed. 
+First, look at your current documentation structure. By default, there are a number of documentation folders with the
+title format of `##-FOLDER TITLE`, with the `##` being the order in which the folders should be displayed.
 
-Let's say we want to add a folder called TESTING, and we want it to be the last item on the list. 
+Let's say we want to add a folder called TESTING, and we want it to be the last item on the list.
 
-First, we need to create a folder in `website/docs` called `06-TESTING`, and put at least one markdown file inside it. 
-Empty folders might not display properly when the site is built. 
+First, we need to create a folder in `website/docs` called `06-TESTING`, and put at least one markdown file inside it.
+Empty folders might not display properly when the site is built.
 
 Next, we navigate to `website/sidebars.js`, where it details information on how the sidebar is formatted and what it
-contains. Each entry in the sidebar is a javascript object contained inside a list called `docs`. Let's analyze an 
-existing entry in this file and go over what each value does. 
+contains. Each entry in the sidebar is a javascript object contained inside a list called `docs`. Let's analyze an
+existing entry in this file and go over what each value does.
 
 ```
 {
@@ -83,7 +83,7 @@ existing entry in this file and go over what each value does.
 ```
 
 The `items` category can get more advanced, and you can look at the `Advanced` category in the file, but that is not
-necessary for the purposes of this documentation. 
+necessary for the purposes of this documentation.
 
 The changes we need to make to this code to make ours work looks something like this
 ```
@@ -105,12 +105,12 @@ The changes we need to make to this code to make ours work looks something like 
 },
 ```
 
-This code will add our new folder to the sidebar when we click on the `Get Started 🚀` button, so let's learn how to 
-add it to the footer as well. 
+This code will add our new folder to the sidebar when we click on the `Get Started 🚀` button, so let's learn how to
+add it to the footer as well.
 
-To do that, we need to make some modifications to `website/docusaurus.config.js`. 
+To do that, we need to make some modifications to `website/docusaurus.config.js`.
 
-The `themeConfig` section defines how the site acts and appears to the user. To add our new category to the footer, 
+The `themeConfig` section defines how the site acts and appears to the user. To add our new category to the footer,
 create a new item in the `Documentation` section. The modifications should look something like this:
 
 ```
