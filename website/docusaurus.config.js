@@ -12,23 +12,26 @@ const config = {
   tagline: 'Make your internal services accessible on the internet, securely',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://d3b-center.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Arc/',
+  //--------------------------------------------------------------------------------------//
+  // THESE VALUES MUST BE CHANGED IF YOU WANT THE GITHUB PAGE TO DISPLAY IN YOUR OWN REPO //
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'D3b', // Usually your GitHub org/user name.
-  projectName: 'Arc', // Usually your repo name.
+  // Set the url of your site (Usually https://YOUR-GITHUB-USERNAME.github.io)
+  url: 'https://jacterk.github.io',
+
+  // Set the /<baseUrl>/ pathname under which your site is served (Usually the repo name)
+  baseUrl: '/arc-website-dev/',
+
+  // Organization Name (If hosting personally, your GitHub username)
+  organizationName: 'JACTERK',
+
+  // Project Name (Usually the repo name)
+  projectName: 'arc-website-dev', // Usually your repo name.
+
+  //--------------------------------------------------------------------------------------//
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
